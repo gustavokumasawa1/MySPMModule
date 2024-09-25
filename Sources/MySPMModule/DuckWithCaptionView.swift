@@ -1,6 +1,6 @@
 import UIKit
 
-class DuckWithCaptionView: UIView {
+public class DuckWithCaptionView: UIView {
     
     private lazy var containerStackView: UIStackView = {
         let stackView = UIStackView()
@@ -25,7 +25,7 @@ class DuckWithCaptionView: UIView {
         return label
     }()
     
-    init() {
+    public init() {
         super.init(frame: .zero)
         setupInterface()
         setupConstraints()
@@ -52,6 +52,10 @@ class DuckWithCaptionView: UIView {
             duckImageView.widthAnchor.constraint(equalToConstant: 250),
             duckImageView.heightAnchor.constraint(equalToConstant: 250)
         ])
+    }
+    
+    public func fill(caption: String) {
+        captionLabel.text = caption
     }
     
 }
