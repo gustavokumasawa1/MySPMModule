@@ -13,7 +13,7 @@ public class DuckWithCaptionView: UIView {
     private lazy var duckImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
-        imageView.image = UIImage(named: "duck", in: Bundle.main, compatibleWith: nil)
+        imageView.image = UIImage(named: "duck", in: Bundle.module, compatibleWith: nil)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
