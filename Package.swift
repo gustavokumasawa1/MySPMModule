@@ -5,11 +5,16 @@ import PackageDescription
 
 let package = Package(
     name: "MySPMModule",
+    platforms: [.iOS(.v16)],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "MySPMModule",
             targets: ["MySPMModule"]),
+        .
+    ],
+    dependencies: [
+        .package(url: "https://github.com/onevcat/Kingfisher.git", exact: "8.0.3")
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
