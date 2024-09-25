@@ -1,4 +1,5 @@
 import UIKit
+import MySPMBaseModule
 
 public class RandomLabel: UILabel {
 
@@ -21,6 +22,7 @@ public class RandomLabel: UILabel {
             DispatchQueue.main.async {
                 UIView.animate(withDuration: 0.2) {
                     self.text = randomString
+                    self.textColor = RandomColorGenerator.get()
                 }
             }
         }

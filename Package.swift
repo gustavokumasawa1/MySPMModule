@@ -13,15 +13,19 @@ let package = Package(
             targets: ["MySPMModule"])
     ],
     dependencies: [
-        .package(url: "https://github.com/onevcat/Kingfisher.git", exact: "8.0.3")
+        .package(url: "https://github.com/onevcat/Kingfisher.git", exact: "8.0.3"),
+        .package(url: "https://github.com/gustavokumasawa1/MySPMBaseModule.git", exact: "0.0.2")
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "MySPMModule"),
+            name: "MySPMModule",
+            dependencies: ["MySPMBaseModule"]
+        ),
         .testTarget(
             name: "MySPMModuleTests",
-            dependencies: ["MySPMModule"]),
+            dependencies: ["MySPMModule"]
+        ),
     ]
 )
