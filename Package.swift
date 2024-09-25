@@ -10,8 +10,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "MySPMModule",
-            targets: ["MySPMModule"]),
-        .
+            targets: ["MySPMModule"])
     ],
     dependencies: [
         .package(url: "https://github.com/onevcat/Kingfisher.git", exact: "8.0.3")
